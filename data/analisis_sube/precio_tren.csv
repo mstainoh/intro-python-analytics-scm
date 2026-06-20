@@ -1,0 +1,15 @@
+fecha_desde,valor_ars,notas
+2019-01-01,8.25,Tarifa base pre-ajustes
+2019-04-01,9.50,Aumento 2019
+2020-01-01,7.75,Reducción + congelamiento pandemia
+2021-01-01,12.25,Recomposición inicial
+2022-06-01,14.25,Ajuste tarifas
+2022-08-01,17.25,Actualización
+2023-03-01,28.00,Segmentación subsidios
+2023-07-01,37.00,Aumento
+2024-01-01,48.38,Última tarifa previa salto
+2024-02-06,130.00,Quita fuerte subsidios [1](https://www.elcomercioonline.com.ar/articulos/60108224-Nuevas-tarifas-de-transporte-en-el-AMBA-cuanto-cuestan-colectivos-trenes-subtes-y-peajes-desde-junio.html)
+2024-04-01,200.00,Transición tarifaria
+2024-08-12,280.00,Ajuste adicional
+2025-01-01,300.00,Inicio indexación
+2026-06-01,350.00,Valor mínimo vigente aprox [2](https://www.observatoriociudad.org/informe-sobre-la-evoluci%C3%B3n-de-pasajeros-y-la-tarifa-del-subte-de-la-ciudad-de-buenos-aires-en-la-%C3%BAltima-d%C3%A9cada-2015-2025/)
