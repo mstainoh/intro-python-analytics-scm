@@ -44,7 +44,7 @@ import pandas as pd
 from pathlib import Path
 
 # output path relativo al repo
-OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "ipc.csv"
+OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "analisis_sube" / "ipc.csv"
 
 url = "https://apis.datos.gob.ar/series/api/series"
 
