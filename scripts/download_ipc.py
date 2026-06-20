@@ -44,7 +44,7 @@ import pandas as pd
 from pathlib import Path
 
 # output path relativo al repo
-OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "ipc.csv"
+OUTPUT_PATH = Path(__file__).resolve().parent.parent / "data" / "analisis_sube" / "ipc.csv"
 
 url = "https://apis.datos.gob.ar/series/api/series"
 
@@ -54,7 +54,8 @@ params = {
     "start_date": "2018-01-01"
 }
 
-r = requests.get(url, params=params)
+# nota: poner verify=False si no funciona por error de https certificate
+r = requests.get(url, params=params, verify=True)
 data = r.json()
 
 # IMPORTANTE: nombre correcto de key
