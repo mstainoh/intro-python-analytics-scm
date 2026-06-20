@@ -54,7 +54,8 @@ params = {
     "start_date": "2018-01-01"
 }
 
-r = requests.get(url, params=params)
+# nota: poner verify=False si no funciona por error de https certificate
+r = requests.get(url, params=params, verify=True)
 data = r.json()
 
 # IMPORTANTE: nombre correcto de key
