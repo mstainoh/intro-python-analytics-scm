@@ -27,11 +27,85 @@ Contenido: variables, listas, `if`, `for`, EOQ, pandas, y gráficos — todo con
 
 ## Notebooks de clase
 
-| Notebook | Tema | Nivel |
-|---|---|---|
-| `python_intro_supply_chain.ipynb` | Fundamentos de Python con ejemplos SCM | Introductorio |
-| `Market_Basket_analysis.ipynb` | Análisis de canasta (apriori, asociación) | Intermedio |
-| `analisis_SUBE.ipynb` | Análisis exploratorio de transporte público (AMBA) | Intermedio-avanzado |
+| Notebook | Tema | Nivel | Duración |
+|---|---|---|---|
+| `python_intro_supply_chain.ipynb` | Fundamentos de Python con ejemplos SCM | Introductorio | ~90 min |
+| `Market_Basket_analysis.ipynb` | Análisis de canasta (apriori, asociación) | Intermedio | ~60 min |
+| `analisis_SUBE_2026.ipynb` | Análisis predictivo de demanda de transporte (AMBA) | Intermedio-avanzado | ~90 min |
+| `analisis_SUBE.ipynb` | Análisis exploratorio de transporte público (legacy) | Intermedio | ~45 min |
+
+### 🚆 Sobre el análisis de transporte (SUBE)
+
+El notebook `analisis_SUBE_2026.ipynb` es una actualización completa de análisis de transporte público en el AMBA (2020–2026) que incluye:
+
+- **Parte 1:** Ingesta de datos SUBE + tarifas reales + IPC + checkpoint en parquet
+- **Parte 2:** Análisis descriptivo (Pareto, estacionalidad, tarifas nominal vs real)
+- **Parte 3:** Modelo predictivo de viajes diarios de subte + elasticidades de precio + what-if
+
+**Para el contexto teórico completo** (decisiones metodológicas, limitaciones, notas de modelado), ver [`docs/anexo_SUBE_2026.md`](docs/anexo_SUBE_2026.md).
+
+Para documentación de datos (fuentes, schema, deflactación), ver [`data/analisis_sube/README.md`](data/analisis_sube/README.md).
+
+## Cómo correr un notebook localmente
+
+### 1. Clonar el repo
+```bash
+git clone https://github.com/mstainoh/intro-python-analytics-scm.git
+cd intro-python-analytics-scm
+```
+
+### 2. Crear un entorno virtual (recomendado)
+```bash
+python3 -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+```
+
+### 3. Instalar dependencias
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+```
+
+Para el notebook de SUBE además:
+```bash
+pip install pyarrow
+```
+
+### 4. Lanzar Jupyter
+```bash
+jupyter notebook
+```
+
+Luego abrí el notebook que quieras desde la interfaz.
+
+## Estructura del repo
+
+```
+.
+├── README.md                          # Este archivo
+├── LICENSE
+├── docs/
+│   └── anexo_SUBE_2026.md            # Contexto teórico del modelo predictivo
+├── data/
+│   ├── analisis_sube/
+│   │   ├── README.md                 # Diccionario de datos, fuentes
+│   │   ├── precio_colectivo.csv
+│   │   ├── precio_subte.csv
+│   │   ├── precio_tren.csv
+│   │   ├── ipc.csv
+│   │   └── info.MD
+│   ├── countries/
+│   │   ├── countries.csv
+│   │   └── countries.geojson
+│   └── groceries/
+│       └── Groceries_dataset.csv
+├── notebooks/
+│   ├── python_intro_supply_chain.ipynb
+│   ├── Market_Basket_analysis.ipynb
+│   ├── analisis_SUBE_2026.ipynb       # Nuevo: análisis predictivo completo
+│   └── analisis_SUBE.ipynb            # Legacy
+└── scripts/
+    └── download_ipc.py
+```
 
 ## Licencia
 
